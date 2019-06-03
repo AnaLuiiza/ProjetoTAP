@@ -1,0 +1,27 @@
+:host {
+    ion-content {
+      --background: none;
+      background-image: url('/assets/imgs/background.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+  }
+
+  .register{
+    margin-top: 10%;
+  }
+  .button{
+    width: 90%;
+    height: 50px;
+    margin-bottom: 20px;
+    
+  }
+  .label{
+    margin-left: 2.5%;
+  }
+  .error{
+    font-size: 12px;
+    margin-left: 2%;
+  }
+  }

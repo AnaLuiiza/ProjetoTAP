@@ -1,0 +1,22 @@
+
+:host {
+  ion-content {
+    
+    --background: none;
+    background-image: url('/assets/imgs/homeBackground.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.margin{
+  margin-top: 90%;
+}
+.buttons{
+  width: 90%;
+  height: 45px;
+  margin-bottom: 20px;
+}
+.error{
+ color: rgb(241, 9, 9);
+}
+}

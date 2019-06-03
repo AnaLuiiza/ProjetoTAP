@@ -1,0 +1,41 @@
+:host {
+    ion-content {
+      --background: none;
+      background-image: url('/assets/imgs/background.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .container{
+    margin-top: 20%;
+    margin-left: 12%;
+  }
+  .container2{
+    margin-top: -15%;
+    margin-left: 12%;
+  }
+  .col-3{
+    color: white;
+    font-weight: bold;
+
+  }
+  .text{
+    font-weight: bold;
+    padding-top: none;
+    margin-top: -45%;
+   margin-left: 12%;
+   font-size: 50px
+  }
+  ion-tab-bar{
+    --background: translucent;   
+  }
+  ion-tab-button{
+    color: black
+  }
+
+  ion-tabs{
+    --background: translucent
+  }
+  
+  
+  }

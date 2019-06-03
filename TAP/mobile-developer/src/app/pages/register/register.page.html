@@ -1,0 +1,39 @@
+<ion-content padding>
+
+  <form [formGroup]="formRegister" (submit)="register()">
+    <div class="register">
+      
+      <ion-label class="label">Nome</ion-label>
+      <ion-input #name formControlName="name" type="string" placeholder="Fulano de Tal" required></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('name') }}</ion-text></div>
+      
+      <ion-label class="label">Telefone</ion-label>
+      <ion-input #phone formControlName="phone" type="string" placeholder="(88) 9898-1234" required></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('phone') }}</ion-text></div>
+      
+      <ion-label class="label">CEP</ion-label>
+      <ion-input #zipCode formControlName="zipCode" type="email" placeholder="58100-000" required></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('zipCode') }}</ion-text></div>
+      
+      <ion-label class="label">Endereço(Rua e numéro)</ion-label>
+      <ion-input #adress formControlName="adress" type="text" placeholder="Salvino de Oliveira -121" required></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('adress') }}</ion-text></div>
+      
+      <ion-label class="label">Bairro</ion-label>
+      <ion-input #neighborhood formControlName="neighborhood" type="text" placeholder="Santo Antonio" required></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('neighborhood') }}</ion-text></div>
+
+      <ion-label class="label">Complemento</ion-label>     
+      <ion-input #complement formControlName="complement" type="text" placeholder="Bloco, Apartamento..."></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('complement') }}</ion-text></div>
+
+      <ion-label class="label">Usuário</ion-label>
+      <ion-input #user formControlName="user" type="text" placeholder="fulanodetal@gmail.com" required></ion-input>
+      <div><ion-text class="error" color="danger" > {{ getError('user') }}</ion-text></div>
+    </div>
+    <div>
+      <ion-button class="button"shape="round" type="submit" color="dark" [disabled]="formRegister.invalid">Cadastrar</ion-button>
+    </div>
+  </form>
+
+</ion-content>

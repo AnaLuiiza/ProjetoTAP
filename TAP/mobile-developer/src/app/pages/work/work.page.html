@@ -1,0 +1,55 @@
+<ion-content padding class="works">
+    <div *ngIf="work.payload.exists==false">
+
+
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+            <ion-spinner name="dots"></ion-spinner>
+            
+        </div>
+
+    </div>
+
+
+
+    <div *ngIf="work.payload.exists==true">
+        <div class="work">
+            <ion-card>
+                <ion-img class="img" text-center src="{{ work.payload._document.proto.fields.link.stringValue }}">
+                </ion-img>
+                <ion-card-header>
+                    <ion-card-title> {{ work.payload._document.proto.fields.work.stringValue }}
+                        ({{ work.payload._document.proto.fields.date.stringValue }})</ion-card-title>
+                    <ion-card-subtitle>{{ work.payload._document.proto.fields.author.stringValue }} </ion-card-subtitle>
+                </ion-card-header>
+                <span class="ion-text-justify">
+                    <ion-card-content>
+                        {{ work.payload._document.proto.fields.description.stringValue }}
+                    </ion-card-content>
+                </span>
+            </ion-card>
+        </div>
+
+        <ion-tabs>
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button>
+                    <ion-icon [routerLink]="'/search'" name="search"></ion-icon>
+                    <ion-label>Buscar</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button>
+                    <ion-icon [routerLink]="'/home'" name="home"></ion-icon>
+                    <ion-label>Home</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button>
+                    <ion-icon name="close-circle" (click)="closeApp()"></ion-icon>
+                    <ion-label>Close</ion-label>
+                </ion-tab-button>
+            </ion-tab-bar>
+        </ion-tabs>
+    </div>
+
+
+</ion-content>
